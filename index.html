@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warzona.cz | Gaming Community Portal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <meta name="description" content="Vaše zábava začíná ZDE!" />
+    <meta name="keywords" content="warzona, Warzona.cz, herní komunitni portal, Šesty, sesty, hry " />
+    <meta name="author" content="Šesty" />
+    <meta name="robots" content="index, follow" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://warzona.cz" />
+    <meta property="og:title" content="REKONSTRUCE ✨" />
+    <meta property="og:description" content="Vaše zábava začíná ZDE!" />
+    <meta property="twitter:card" content="summary_large_image" />
+
+    <meta name="twitter:image" content="https://raw.githubusercontent.com/Fandasestak/neonys-brand/main/webg.png" />
+    <meta property="og:image" content="https://raw.githubusercontent.com/Fandasestak/warzona-cz/main/backgroundWarzona.png" />
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <link href="warzona.png" rel="shortcut icon">
+    <link rel="stylesheet" href="style.css">
+    <!-- Boxicons -->
+    <link href="https://cdn.boxicons.com/3.0.8/fonts/basic/boxicons.min.css" rel="stylesheet">
+    <link href="https://cdn.boxicons.com/3.0.8/fonts/filled/boxicons-filled.min.css" rel="stylesheet">
+    <link href="https://cdn.boxicons.com/3.0.8/fonts/brands/boxicons-brands.min.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- BG -->
+<div class="bg-wrap">
+    <div class="bg-grid"></div>
+</div>
+
+<div class="bg-logo">
+
+    <nav>
+        <section class="navbar">
+            <a href="uvod.html" class="logo-link" data-i18n="nav_uvod">Úvod</a>
+            <a href="https://warzona.cz">
+                <img src="warzona.png" alt="Warzona.cz logo" class="logo" height="auto" width="100px">
+            </a>
+            <a href="historie.html" class="logo-link" data-i18n="nav_historie">Historie</a>
+
+            <!-- translate (cz/en/sk) -->
+            <div class="lang-switcher">
+                <button class="lang-btn active" id="btn-cz" onclick="setLang('cz')">CZ</button>
+                <button class="lang-btn" id="btn-en" onclick="setLang('en')">EN</button>
+                <button class="lang-btn" id="btn-sk" onclick="setLang('sk')">SK</button>
+            </div>
+        </section>
+    </nav>
+
+    <main class="main" id="skip">
+        <section class="hero">
+            <div class="hero-content">
+
+                <h1 class="hero-title" data-i18n="hero_title">WarZona.cz – od hráčů pro hráče</h1>
+
+                <p class="hero-subtitle" data-i18n="hero_subtitle">
+                    Zdravím všechny hráče, co si na nás vzpomněli, i na nově příchozí, bohužel je naše stránka v rekonstrukci.
+                    Ale pro nově příchozí, zde máme i <a href="uvod.html" class="logo-link">úvod</a> a naší <a href="historie.html" class="logo-link">historii</a>.
+                    <br>#Jupííí
+                </p>
+
+                <!-- Side-by-side: Aktuální servery vlevo, Coming Soon vpravo -->
+                <div class="servers-row">
+
+                    <!-- VLEVO – Aktuální servery -->
+                    <div class="aktualni-server">
+                        <h1 data-i18n="servers_current">Aktualní servery:</h1>
+                        <button class="aktualni-server-button" onclick="copyServer('mc.warzona.cz', this)">
+                            mc.warzona.cz
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M9 2H11V5H9z"/>
+                                <path d="M2 9H5V11H2z"/>
+                                <path d="m20.37,13.93c.38-.15.63-.52.63-.92s-.24-.77-.62-.93l-12-5c-.37-.16-.81-.07-1.09.22-.29.29-.37.72-.22,1.09l5,12c.16.37.52.62.92.62h0c.41,0,.77-.25.92-.63l1.44-3.59,4.93,4.93,1.41-1.41-4.93-4.93,3.59-1.44Zm-6.3.7l-1.09,2.73-3.12-7.5,7.5,3.12-2.73,1.09c-.25.1-.46.3-.56.56Z"/>
+                                <path d="M3.96 2.54 3.25 3.25 2.54 3.96 3.79 5.21 5.04 6.46 5.75 5.75 6.46 5.04 5.21 3.79 3.96 2.54z"/>
+                            </svg>
+                        </button>
+                        <button class="aktualni-server-button" onclick="copyServer('csgo.warzona.cz', this)">
+                            csgo.warzona.cz
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M9 2H11V5H9z"/>
+                                <path d="M2 9H5V11H2z"/>
+                                <path d="m20.37,13.93c.38-.15.63-.52.63-.92s-.24-.77-.62-.93l-12-5c-.37-.16-.81-.07-1.09.22-.29.29-.37.72-.22,1.09l5,12c.16.37.52.62.92.62h0c.41,0,.77-.25.92-.63l1.44-3.59,4.93,4.93,1.41-1.41-4.93-4.93,3.59-1.44Zm-6.3.7l-1.09,2.73-3.12-7.5,7.5,3.12-2.73,1.09c-.25.1-.46.3-.56.56Z"/>
+                                <path d="M3.96 2.54 3.25 3.25 2.54 3.96 3.79 5.21 5.04 6.46 5.75 5.75 6.46 5.04 5.21 3.79 3.96 2.54z"/>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="comingSoon-server">
+                        <h1 data-i18n="servers_soon">Již brzy:</h1>
+                        <p class="comingSoon-server-message">League of Legends</p>
+                        <p class="comingSoon-server-message">World of Tanks</p>
+                        <p class="comingSoon-server-message">World of Warcraft</p>
+                        <p class="comingSoon-server-message" data-i18n="soon_more">a další…</p>
+                    </div>
+
+                </div>
+
+            </div>
+            <footer class="footer">
+                <div class="footer-bottom">
+                    <span data-i18n="footer_rights">© 2026 Warzona.cz ~ Všechna práva vyhrazena.</span>
+                    <span style="text-align: center"> <a href="https://sesty.dev" target="_blank"> Design & Development by Šesty</a></span>
+                </div>
+            </footer>
+        </section>
+    </main>
+
+</div>
+
+<!-- Toast notifikace -->
+<div class="copy-toast" id="copyToast">
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+    </svg>
+    <span id="toastText">Zkopírováno!</span>
+</div>
+
+<script src="lang.js"></script>
+<script>
+    function copyServer(text, btn) {
+        navigator.clipboard.writeText(text).then(() => {
+            // Button feedback
+            const original = btn.innerHTML;
+            btn.innerHTML = `
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                </svg>
+                Zkopírováno!`;
+            btn.style.color = '#50a135';
+            btn.style.borderColor = 'rgba(80,161,53,0.6)';
+
+            setTimeout(() => {
+                btn.innerHTML = original;
+                btn.style.color = '';
+                btn.style.borderColor = '';
+            }, 2000);
+
+            // Toast
+            const toast = document.getElementById('copyToast');
+            document.getElementById('toastText').textContent = `„${text}" zkopírováno do schránky`;
+            toast.classList.add('show');
+            clearTimeout(toast._timer);
+            toast._timer = setTimeout(() => toast.classList.remove('show'), 2500);
+        });
+    }
+</script>
+</body>
+</html>
